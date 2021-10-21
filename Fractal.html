@@ -1,0 +1,42 @@
+<! DOCTYPE html >
+<html lang="es">
+<cabeza>
+    <meta charset="UTF-8">
+</cabeza>
+<cuerpo>
+    < canvas id="my_canvas" width="1000" height="800"></canvas>
+    <guión>
+    var myCanvas = documento. getElementById("my_canvas");
+    var ctx = myCanvas. getContext("2d");
+    función draw(startX, startY, len, angle) {
+        ctx. beginPath();
+        ctx. guardar();
+
+
+
+        ctx. strokeStyle = "verde";
+        ctx. fillStyle = "verde";
+
+        ctx. traducir(startX, startY);
+        ctx. rotar(ángulo * Matemáticas. PI/300);
+        ctx. moveTo(0, 0);
+        ctx. lineTo(0, -len);
+        ctx. accidente cerebrovascular();
+
+        ctx. sombraBlur = 15;
+        ctx. shadowColor = "rgba(0,0,0,0.8)";
+
+        if(len < 10) {
+            ctx. restaurar();
+            devolución;
+        }
+
+        sorteo(0, -len, len*0.8, -40);
+        sorteo(0, -len, len*0.8, +20);
+
+        ctx. restaurar();
+    }
+    sorteo(400, 600, 120, 0)       
+    </guión>
+</cuerpo>
+</html>
